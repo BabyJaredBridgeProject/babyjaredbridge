@@ -1,10 +1,16 @@
+/* @font-face {
+    font-family: 'The Seasons';
+    src: url(Resources/Fonts/theseasons.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+} */
+
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     box-sizing: border-box;
     background-color: #1e1e1e;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .container {
@@ -22,6 +28,18 @@ body, html {
     background-color: whitesmoke;
     text-align: center;
     box-sizing: border-box;
+}
+
+.petrona {
+    font-family: Petrona;
+}
+
+.antic {
+    font-family: Antic
+}
+
+.lora {
+    font-family: Lora;
 }
 
 .donate {
