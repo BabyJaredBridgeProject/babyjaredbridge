@@ -8,7 +8,7 @@ body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #FFFF;
+    background-color: #ffff;
 
     -webkit-font-smoothing: subpixel-antialiased;
     text-rendering: geometricPrecision;
@@ -23,11 +23,6 @@ body, html {
     font-family: Antic
 }
 
-.donate {
-    width: 100%;
-    font-size: larger;
-}
-
 /* ------ Major Divs ------ */
 .container {
     display: flex;
@@ -39,33 +34,49 @@ body, html {
 
 .item {
     width: 100%;
-    margin: 0px 0px 20px; /* TODO: Delete when page is complete */
     padding: 20px;
-    background-color: whitesmoke;
     text-align: center;
     box-sizing: border-box;
 }
 
 .home {
-    /* Sizing */
-    width: 100%;
-    height: 100%;
     min-height: 46rem;
+    z-index: 1;
 
-    /* Background */
     background-image: url(Resources/Images/background_home.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
-    /* Other */
     border-radius: 0rem 0rem 1rem 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    color: #FFFFFF;
 
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.donate {
+    min-height: 25rem;
+
+    background-color: #FFFF;
+    color: #2D3A15;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.donate-title-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 100%;
+    transition: all .2s;
 }
 
 .subsection {
@@ -77,18 +88,13 @@ body, html {
     font-size: clamp(var(--main-font-min-size),
                 var(--main-font-target-size),
                 var(--main-font-max-size));
-    color: #FFFF;
     font-weight: 700;
-    width: 100%;
-
-    left: max(0, calc(50% - 50vw));
 }
 
 .subtitle {
     font-size: clamp(var(--main-font-min-size),
             calc(var(--main-font-target-size) / 2.5),
             calc(var(--main-font-max-size) / 2.5));
-    color: #FFFF;
     padding-bottom: 0.8rem;
 }
 
@@ -121,6 +127,8 @@ body, html {
 
     background-color: #ffffffcc;
 
+    padding: 1%;
+
     transition: all .2s;
 }
 .home-button:hover {
@@ -128,6 +136,57 @@ body, html {
     height: 50%;
     padding-left: 2%;
     padding-right: 2%;
+}
+.home-button:active {
+    padding-left: 0%;
+    padding-right: 0%;
+}
+
+.donate-button {
+    font-size: clamp(
+        var(--main-font-min-size),
+        calc(var(--main-font-target-size) / 2),
+        calc(var(--main-font-max-size) / 2)
+    );
+
+    border-radius: 0.5rem;
+    border-style: none;
+
+    background-color: #526D16;
+    color: #FFFF;
+
+    margin-top: 1rem;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    width: clamp(
+        var(--main-font-min-size),
+        calc(var(--main-font-target-size) * 8 / 2),
+        calc(var(--main-font-max-size) * 8 / 2)
+    );
+    height: clamp(
+        var(--main-font-min-size),
+        calc(var(--main-font-target-size) * 2 / 2),
+        calc(var(--main-font-max-size) * 2 / 2)
+    );
+
+    transition: all .3s;
+}
+.donate-button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+}
+.donate-button:active {
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.donate-text {
+    font-size: clamp(
+        var(--main-font-min-size),
+        calc(var(--main-font-target-size) / 4),
+        calc(var(--main-font-max-size) / 4)
+    );
+
+    text-align: left;
 }
 /* ------ Misc ------ */
 
@@ -139,9 +198,15 @@ body, html {
 
     .home-button {
         height: 20%;
+        padding: 1%;
     }
     .home-button:hover {
         height: 30%;
+        padding: 1%;
+    }
+    .home-button:active {
+        padding-left: 2%;
+        padding-right: 2%;
     }
 
     .home-buttons-div {
@@ -150,10 +215,18 @@ body, html {
         flex-direction: column;
         justify-content: space-evenly;
     }
+
+    .donate-title-div {
+        width: 80%;
+    }
 }
 
 @media (min-width: 1300px) {
     .home-left-padding {
         width: 15%;
+    }
+
+    .donate-title-div {
+        width: 80%;
     }
 }
