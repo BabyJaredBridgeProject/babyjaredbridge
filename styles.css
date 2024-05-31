@@ -23,7 +23,7 @@ body, html {
 
 .item {
     width: 100%;
-    margin: 10px 0;
+    margin: 10px 0; /* TODO: Delete when page is complete */
     padding: 20px;
     background-color: whitesmoke;
     text-align: center;
