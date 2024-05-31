@@ -1,18 +1,34 @@
-/* @font-face {
-    font-family: 'The Seasons';
-    src: url(Resources/Fonts/theseasons.otf) format('opentype');
-    font-weight: normal;
-    font-style: normal;
-} */
+:root {
+    --main-font-min-size: 1rem;
+    --main-font-max-size: 4.5rem;
+    --main-font-target-size: 10vw;
+}
 
 body, html {
     margin: 0;
     padding: 0;
-    height: 100%;
     box-sizing: border-box;
-    background-color: #1e1e1e;
+    background-color: #FFFF;
+
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-rendering: geometricPrecision;
 }
 
+/* ------ FONTS ------ */
+.main-font {
+    font-family: 'the-seasons';
+}
+
+.alt-font {
+    font-family: Antic
+}
+
+.donate {
+    width: 100%;
+    font-size: larger;
+}
+
+/* ------ Major Divs ------ */
 .container {
     display: flex;
     align-items: center;
@@ -23,28 +39,102 @@ body, html {
 
 .item {
     width: 100%;
-    margin: 10px 0; /* TODO: Delete when page is complete */
+    margin: 0px 0px 20px; /* TODO: Delete when page is complete */
     padding: 20px;
     background-color: whitesmoke;
     text-align: center;
     box-sizing: border-box;
 }
 
-.petrona {
-    font-family: Petrona;
-}
-
-.antic {
-    font-family: Antic
-}
-
-.lora {
-    font-family: Lora;
-}
-
-.donate {
+.home {
+    /* Sizing */
     width: 100%;
-    font-size: larger;
+    height: 100%;
+    min-height: 46rem;
+
+    /* Background */
+    background-image: url(Resources/Images/background_home.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Other */
+    border-radius: 0rem 0rem 1rem 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
+.subsection {
+    background-color: #1e1e1e;
+}
 
+/* ------ Other Divs ------ */
+.title {
+    font-size: clamp(var(--main-font-min-size),
+                var(--main-font-target-size),
+                var(--main-font-max-size));
+    color: #FFFF;
+    font-weight: 700;
+    width: 100%;
+
+    left: max(0, calc(50% - 50vw));
+}
+
+.subtitle {
+    font-size: clamp(var(--main-font-min-size),
+            calc(var(--main-font-target-size) / 2.5),
+            calc(var(--main-font-max-size) / 2.5));
+    color: #FFFF;
+}
+
+.home-left-padding {
+    width: 0%;
+    height: 100%;
+    transition: all .2s;
+}
+@media (max-width: 800px) {
+    .home-left-padding {
+        width: 8%;
+    }
+}
+@media (min-width: 1024px) {
+    .home-left-padding {
+        width: 15%;
+    }
+}
+
+/* ------ Buttons ------ */
+.home-button {
+    --scalor: 2.0;
+
+    font-size: clamp(var(--main-font-min-size),
+                calc(var(--main-font-target-size) / 1.8 / var(--scalor)),
+                calc(var(--main-font-max-size) / 1.8 / var(--scalor)));
+
+    margin-right: 0.8rem;
+    margin-top: 0.8rem;
+
+    border-radius: 0.3rem;
+    border-style: none;
+
+    background-color: #ffffffcc;
+
+    --padding-height: clamp(
+        calc(var(--main-font-min-size) / 5 / var(--scalor)),
+        calc(var(--main-font-target-size) / 5 / var(--scalor)),
+        calc(var(--main-font-max-size) / 5 / var(--scalor))
+    );
+    --padding-width: clamp(
+        var(--main-font-min-size),
+        calc(var(--main-font-target-size) / 1.8 / var(--scalor)),
+        calc(var(--main-font-max-size) / 1.8 / var(--scalor))
+    );
+    padding: var(--padding-height) var(--padding-width);
+
+    flex-wrap: wrap;
+}
+/* ------ Images ------ */
