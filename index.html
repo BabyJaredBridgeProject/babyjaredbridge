@@ -17,33 +17,33 @@
                 <div>
                     <div class="alt-font subtitle">Help us build the</div>
                     <div class="main-font title">Baby Jared Bridge</div>
-                    <button class="home-button main-font" onclick="doAlert()">DONATE</button>
-                    <button class="home-button main-font" onclick="doAlert()">WATCH THE FILM</button>
-                    <!-- <button class="home-button main-font" onclick="doAlert()">LEARN MORE</button> -->
+                    <button class="home-button main-font" onclick="redirectOnPage('donate')">DONATE</button>
+                    <button class="home-button main-font" onclick="redirectOnPage('video')">WATCH THE FILM</button>
+                    <!-- <button class="home-button main-font" onclick="redirectOnPage('learnmore')">LEARN MORE</button> -->
                 </div>
             </div>
 
-            <div name="donate" class="item subsection">
+            <div id="donate" class="item subsection">
                 <H1 class="main-font">Donate Section</H1>
             </div>
 
-            <div name="video" class="item subsection">
+            <div id="video" class="item subsection">
                 <H1 class="main-font">Video Section</H1>
             </div>
 
-            <div name="learnmore" class="item subsection">
+            <!-- <div id="learnmore" class="item subsection">
                 <H1 class="main-font">Learn More Section</H1>
             </div>
 
-            <div name="footer" class="item subsection">
+            <div id="footer" class="item subsection">
                 <H1 class="main-font">Footer Section</H1>
-            </div>
+            </div> -->
         </div>
     </body>
 
     <script>
-        function doAlert(){
-            alert('You clicked a button :)');
+        function redirectOnPage(divID) {
+            document.getElementById(divID).scrollIntoView({behavior: "smooth"});
         }
     </script>
 </html>
