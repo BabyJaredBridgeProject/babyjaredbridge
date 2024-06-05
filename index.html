@@ -41,8 +41,9 @@
                     </div>
                 </div>
 
-                <!-- donate button -->
-                <button class="donate-button main-font" onclick="redirectOut('www.ottawagospelhall.com')">Donate Here</button>
+                <stripe-buy-button class="donate-card" buy-button-id="buy_btn_1PNc8hRrdbQQOvUZgHbbTLuf"
+                    publishable-key="pk_live_51PL549RrdbQQOvUZ5VJ9uaWyVb2kiW1KuNm3ldtUxngcSxvXvNjQMnDOhRt7rsLjhARSFyJSxUW5AYxqAQ5KuRfH00sjGDBYKd">
+                </stripe-buy-button>
             </div>
 
             <!-- <div id="video" class="item subsection">
@@ -67,5 +68,9 @@
         function redirectOut(url) {
             window.open("https://" + url);
         }
+    </script>
+
+    <script async
+        src="https://js.stripe.com/v3/buy-button.js">
     </script>
 </html>

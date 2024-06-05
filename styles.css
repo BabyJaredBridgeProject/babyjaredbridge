@@ -59,7 +59,7 @@ body, html {
 }
 
 .donate {
-    min-height: 25rem;
+    min-height: 50rem;
 
     background-color: #FFFF;
     color: #2D3A15;
@@ -111,6 +111,18 @@ body, html {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+}
+
+.donate-card {
+    box-shadow: none;
+    border-radius: 0px;
+    transition: all ease .2s;
+}
+
+.donate-card:hover {
+    box-shadow: 5px 5px 16px #b3b3b3,
+        -5px -5px 16px #ffffff;
+    border-radius: 1rem;
 }
 
 /* ------ Buttons ------ */
