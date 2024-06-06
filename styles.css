@@ -43,7 +43,6 @@ body, html {
     min-height: 46rem;
     z-index: 1;
 
-    background-image: url(Resources/Images/background_home.webp);
     background-image: url(docs/assets/background_home.webp);
     background-size: cover;
     background-position: center;
