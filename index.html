@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Antic&family=Lora:ital,wght@0,400..700;1,400..700&family=Petrona:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="https://js.stripe.com/v3/"></script>
     </head>
 
     <body>
@@ -28,22 +29,27 @@
                 <div class="donate-title-div">
                     <div class="main-font title">Donate</div>
                     <div class="alt-font subtitle">help us build the bridge across the Yuat River</div>
-                    <div class="alt-font donate-text">
-                        AT Projects, a construction company based out of Goroka, Papua New Guinea,
-                        has agreed to manage the construction of the Baby Jared Bridge. AT Projects
-                        specializes in engaging with rural communities to increase their quality of
-                        life through building projects such as this. On May 16th, 2024, a team of
-                        engineers surveyed the land where the bridge will be built. The current quote
-                        for this building project, including the transportation of materials to the
-                        remote Yuat river, is $200 000 AUD. If these funds can be raised by the end
-                        of June 2024, construction will begin during the dry season of July-August
-                        2024.
-                    </div>
                 </div>
 
-                <stripe-buy-button class="donate-card" buy-button-id="buy_btn_1PNc8hRrdbQQOvUZgHbbTLuf"
-                    publishable-key="pk_live_51PL549RrdbQQOvUZ5VJ9uaWyVb2kiW1KuNm3ldtUxngcSxvXvNjQMnDOhRt7rsLjhARSFyJSxUW5AYxqAQ5KuRfH00sjGDBYKd">
-                </stripe-buy-button>
+
+                <div class="donate-div">
+                    <stripe-buy-button class="donate-card" buy-button-id="buy_btn_1PNc8hRrdbQQOvUZgHbbTLuf"
+                        publishable-key="pk_live_51PL549RrdbQQOvUZ5VJ9uaWyVb2kiW1KuNm3ldtUxngcSxvXvNjQMnDOhRt7rsLjhARSFyJSxUW5AYxqAQ5KuRfH00sjGDBYKd">
+                    </stripe-buy-button>
+
+                    <img class="bridge-img" src="docs/assets/images/bridge.svg">
+                </div>
+
+                <div class="alt-font donate-text">
+                    AT Projects, a construction company based out of Goroka, Papua New Guinea,
+                    has agreed to manage the construction of the Baby Jared Bridge. AT Projects
+                    specializes in engaging with rural communities to increase their quality of
+                    life through building projects such as this. On May 16th, 2024, a team of
+                    engineers surveyed the land where the bridge will be built. The current quote
+                    for this building project, including the transportation of materials to the
+                    remote Yuat river, is $200 000 AUD. If these funds can be raised by the end
+                    of June 2024, construction will begin during the dry season of July-August 2024.
+                </div>
             </div>
 
             <!-- <div id="video" class="item subsection">
