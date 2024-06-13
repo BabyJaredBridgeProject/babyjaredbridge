@@ -3,6 +3,7 @@
     <head>
         <meta name=viewport content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
+        <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-src https://js.stripe.com; script-src https://js.stripe.com;" />-->
         <link rel=stylesheet href=styles.css>
         <title>Build a Bridge</title>
         <link rel="stylesheet" href="https://use.typekit.net/xtc0rny.css">
@@ -21,7 +22,7 @@
                     <div class="main-font title">Baby Jared Bridge</div>
                     <div class="home-buttons-div">
                         <button class="home-button main-font" onclick="redirectOnPage('donate')">DONATE</button>
-                        <button class="home-button main-font" onclick="redirectOnPage('video')">WATCH THE FILM</button>
+                        <button class="home-button main-font" onclick="redirectOnPage('video-container')">WATCH THE FILM</button>
                         <button class="home-button main-font" onclick="redirectOnPage('learnmore')">LEARN MORE</button>
                     </div>
                 </div>
@@ -54,10 +55,14 @@
                     of June 2024, construction will begin during the dry season of July-August 2024.
                 </div>
             </div>
-
-            <!-- <div id="video" class="item subsection">
-                <H1 class="main-font">Video Section</H1>
-            </div> -->
+            <div id="video" class="item subsection">
+                <div class="main-font title subsection-title">Samarie's Story</div>
+                <div id="video-container" class="video-container">
+                    <iframe class="video-player" frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""
+                        src="https://galleries.vidflow.co/videos/i0fq525v">
+                    </iframe>
+                </div>
+            </div>
 
             <!-- <div id="learnmore" class="item subsection">
                 <H1 class="main-font">Learn More Section</H1>
