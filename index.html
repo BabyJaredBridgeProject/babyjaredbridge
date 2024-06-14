@@ -9,10 +9,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Antic&family=Lora:ital,wght@0,400..700;1,400..700&family=Petrona:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <script src="https://js.stripe.com/v3/"></script>
     </head>
 
-    <body>
+    <body onload="populateFundraiserProgress()">
         <div class="container">
             <div class="home item">
                 <div class="home-left-padding"></div>
@@ -34,11 +33,26 @@
 
 
                 <div class="donate-div">
-                    <stripe-buy-button class="donate-card" buy-button-id="buy_btn_1PNc8hRrdbQQOvUZgHbbTLuf"
-                        publishable-key="pk_live_51PL549RrdbQQOvUZ5VJ9uaWyVb2kiW1KuNm3ldtUxngcSxvXvNjQMnDOhRt7rsLjhARSFyJSxUW5AYxqAQ5KuRfH00sjGDBYKd">
-                    </stripe-buy-button>
+                    <div class="progress-div">
+                        <img class="bridge-img" src="docs/assets/images/bridge.svg" alt="A 2-D graphic of a simple green bridge">
 
-                    <img class="bridge-img" src="docs/assets/images/bridge.svg">
+                        <div class="alt-font text-progress-div">
+                            <div id="fundraiser-progress" class="alt-font fundraiser-progress-text"></div>
+                            <div id="fundraiser-update-time" class="alt-font disclaimer"></div>
+                        </div>
+                    </div>
+
+                    <a class="donate-button alt-font" href="https://donate.stripe.com/eVabMG3W1bATe9q8wx" target="_blank">
+                        Donate
+                        <img src="docs/assets//images/donate_icon.svg"
+                            alt="this icon shows that the button it is associated with leads to an external link">
+                    </a>
+
+                    <div class="alt-font disclaimer" style="padding-top: .5rem;">
+                        All donations are processed through Stripe
+                        <br>
+                        Questions? Contact us at babyjaredbridge@gmail.com
+                    </div>
                 </div>
 
                 <br>
@@ -73,7 +87,7 @@
         </div>
     </body>
 
-    <script>
+    <script type="text/javascript">
         function redirectOnPage(divID) {
             document.getElementById(divID).scrollIntoView({behavior: "smooth"});
         }
@@ -81,9 +95,23 @@
         function redirectOut(url) {
             window.open("https://" + url);
         }
-    </script>
 
-    <script async
-        src="https://js.stripe.com/v3/buy-button.js">
+        function populateFundraiserProgress() {
+            let progress = {
+                "goal": 200000,
+                "current": 0,
+                "currency": "AUD",
+                "update_time": "2100",
+                "update_timezone": "EDT"
+            };
+
+            console.log("populating fundraiser progress");
+
+            let fundraiserProgress = document.getElementById("fundraiser-progress");
+            fundraiserProgress.innerHTML = "$" + progress.current + " raised of $" + progress.goal + " " + progress.currency;
+
+            let fundraiserUpdateTime = document.getElementById("fundraiser-update-time");
+            fundraiserUpdateTime.innerHTML = "fundraising progress updated daily at " + progress.update_time + " " + progress.update_timezone;
+        }
     </script>
 </html>
