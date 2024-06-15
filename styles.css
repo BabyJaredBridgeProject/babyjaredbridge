@@ -4,7 +4,8 @@
     --main-font-target-size: 10vw;
 }
 
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -49,7 +50,6 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
 
-    border-radius: 0rem 0rem 1rem 1rem;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, .7);
     overflow: hidden;
     color: #FFFFFF;
@@ -87,8 +87,8 @@ body, html {
 /* ------ Other Divs ------ */
 .title {
     font-size: clamp(var(--main-font-min-size),
-                var(--main-font-target-size),
-                var(--main-font-max-size));
+            var(--main-font-target-size),
+            var(--main-font-max-size));
     font-weight: 700;
 }
 
@@ -142,11 +142,9 @@ body, html {
 }
 
 .disclaimer {
-    font-size: clamp(
-        var(--main-font-min-size) / 5,
-        var(--main-font-target-size) / 4,
-        var(--main-font-max-size) / 4
-    );
+    font-size: clamp(var(--main-font-min-size) / 5,
+            var(--main-font-target-size) / 4,
+            var(--main-font-max-size) / 4);
 }
 
 .video-container {
@@ -172,11 +170,9 @@ body, html {
 }
 
 .fundraiser-progress-text {
-    font-size: clamp(
-        var(--main-font-min-size) / 6,
-        var(--main-font-target-size) / 3,
-        var(--main-font-max-size) / 2.5
-    );
+    font-size: clamp(var(--main-font-min-size) / 6,
+            var(--main-font-target-size) / 3,
+            var(--main-font-max-size) / 2.5);
 }
 
 /* ------ Buttons ------ */
@@ -185,8 +181,8 @@ body, html {
     height: 40%;
 
     font-size: clamp(var(--main-font-min-size),
-                calc(var(--main-font-target-size) / 1.8 / var(--scalor)),
-                calc(var(--main-font-max-size) / 1.8 / var(--scalor)));
+            calc(var(--main-font-target-size) / 1.8 / var(--scalor)),
+            calc(var(--main-font-max-size) / 1.8 / var(--scalor)));
 
     border-radius: 0.3rem;
     border-style: none;
@@ -197,24 +193,24 @@ body, html {
 
     transition: all .2s;
 }
+
 .home-button:hover {
     background-color: #ffffffdd;
     height: 50%;
     padding-left: 2%;
     padding-right: 2%;
 }
+
 .home-button:active {
     padding-left: 0%;
     padding-right: 0%;
 }
 
 .donate-button {
-    font-size: clamp(
-        var(--main-font-min-size),
-        calc(var(--main-font-target-size) / 2),
-        calc(var(--main-font-max-size) / 2)
-    );
-    display:flex;
+    font-size: clamp(var(--main-font-min-size),
+            calc(var(--main-font-target-size) / 2),
+            calc(var(--main-font-max-size) / 2));
+    display: flex;
     flex-direction: row;
     align-items: center;
     flex-shrink: 2;
@@ -236,23 +232,24 @@ body, html {
 
     transition: all .3s;
 }
+
 .donate-button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
 }
+
 .donate-button:active {
     box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .donate-text {
-    font-size: clamp(
-        var(--main-font-min-size),
-        calc(var(--main-font-target-size) / 3),
-        calc(var(--main-font-max-size) / 3)
-    );
+    font-size: clamp(var(--main-font-min-size),
+            calc(var(--main-font-target-size) / 3),
+            calc(var(--main-font-max-size) / 3));
 
     max-width: 80%;
     text-align: left;
 }
+
 /* ------ Images ------ */
 .bridge-img {
     width: 100%;
@@ -280,10 +277,12 @@ body, html {
         height: 20%;
         padding: 1%;
     }
+
     .home-button:hover {
         height: 30%;
         padding: 1%;
     }
+
     .home-button:active {
         padding-left: 2%;
         padding-right: 2%;
