@@ -143,10 +143,9 @@ body, html {
 }
 
 .disclaimer {
-    font-size: clamp(
-        var(--main-font-min-size) / 5,
-        var(--main-font-target-size) / 4,
-        var(--main-font-max-size) / 4
+    font-size: max(
+        0.5rem,
+        calc(var(--main-font-target-size) / 6.5)
     );
 }
 
@@ -164,7 +163,7 @@ body, html {
 
 .text-progress-div {
     position: absolute;
-    top: 80%;
+    top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
@@ -172,10 +171,9 @@ body, html {
 }
 
 .fundraiser-progress-text {
-    font-size: clamp(
-        var(--main-font-min-size) / 6,
-        var(--main-font-target-size) / 3,
-        var(--main-font-max-size) / 2.5
+    font-size: max(
+        0.8rem,
+        calc(var(--main-font-target-size) / 3.8)
     );
 }
 
@@ -316,6 +314,10 @@ body, html {
 
     .donate {
         min-height: 40rem;
+    }
+
+    .text-progress-div {
+        top: 90%;
     }
 }
 
