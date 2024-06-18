@@ -12,6 +12,44 @@ body, html {
 
     -webkit-font-smoothing: subpixel-antialiased;
     text-rendering: geometricPrecision;
+
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 11px;
+    height: 10px;
+    transition: 1.0s ease all;
+}
+
+/* The scrollbar track (background) */
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* The scrollbar handle (thumb) */
+::-webkit-scrollbar-thumb {
+    background-color: #8f8f8f;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    border-radius: 5px; /* Round edges of the thumb */
+    transition: 1.0s ease all;
+}
+
+/* The handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(110, 110, 110);
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #526d16;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-corner {
+    background: none
 }
 
 /* ------ FONTS ------ */
