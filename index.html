@@ -96,22 +96,34 @@
             window.open("https://" + url);
         }
 
-        function populateFundraiserProgress() {
-            let progress = {
-                "goal": 200000,
-                "current": 0,
-                "currency": "AUD",
-                "update_time": "21:00",
-                "update_timezone": "EDT"
-            };
+        async function populateFundraiserProgress() {
+            let progress = await fetchGoalsData();
 
-            console.log("populating fundraiser progress");
+            const formatter = new Intl.NumberFormat('en-US', { useGrouping: true, });
+            const formattedGoal = formatter.format(progress.goal);
+            const formattedCurrent = formatter.format(progress.current);
 
             let fundraiserProgress = document.getElementById("fundraiser-progress");
-            fundraiserProgress.innerHTML = "$" + progress.current + " raised of $" + progress.goal + " " + progress.currency;
+            fundraiserProgress.innerHTML = "$" + formattedCurrent + " raised of $" + formattedGoal + " " + progress.currency;
 
             let fundraiserUpdateTime = document.getElementById("fundraiser-update-time");
             fundraiserUpdateTime.innerHTML = "fundraising progress updated daily at " + progress.update_time + " " + progress.update_timezone;
+        }
+
+        async function fetchGoalsData() {
+            try {
+                const response = await fetch("docs\\assets\\json\\data.json");
+
+                if (!response.ok)
+                    throw new Error("HTTP error " + response.statusText);
+
+                const text = await response.text();
+                return JSON.parse(text);
+            } catch (error) {
+                console.error(error);
+            }
+
+            return undefined;
         }
     </script>
 </html>
