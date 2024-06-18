@@ -189,6 +189,7 @@ body, html {
     border-radius: 0.3rem;
     border-style: none;
 
+    color: black; /* Set explicitly to prevent Safari setting -apple-system-blue */
     background-color: #ffffffcc;
 
     padding: 1%;
