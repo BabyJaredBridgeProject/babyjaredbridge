@@ -114,7 +114,9 @@ body, html {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 1rem;
+    /* justify-content: space-around; re-enable once the Learn More section is implemented*/
     padding-top: 0.8rem;
 }
 
