@@ -292,6 +292,7 @@ body, html {
 
         flex-direction: column;
         justify-content: space-evenly;
+        gap: 0.5rem;
     }
 
     .donate-title-div {
