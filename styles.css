@@ -152,7 +152,6 @@ body, html {
     position: relative;
     padding: 0 0 56.25% 0;
     height: 0;
-    scroll-margin-top: 8px;
 }
 
 .progress-div {
@@ -327,5 +326,9 @@ body, html {
 
     .donate-div {
         width: 80%;
+    }
+
+    .video-container {
+        scroll-margin-top: 3px;
     }
 }
