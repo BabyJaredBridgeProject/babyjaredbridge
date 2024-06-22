@@ -189,7 +189,7 @@ body, html {
 
 .video-container {
     position: relative;
-    padding: 0 0 56.25% 0;
+    padding-bottom: 56.25%; /* 16:9 */
     height: 0;
 }
 
@@ -373,6 +373,6 @@ body, html {
     }
 
     .video-container {
-        scroll-margin-top: 3px;
+        scroll-margin-top: 8px;
     }
 }
