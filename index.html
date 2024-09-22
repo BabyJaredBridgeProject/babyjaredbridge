@@ -110,7 +110,7 @@
             fundraiserProgress.innerHTML = "$" + formattedCurrent + " raised of $" + formattedGoal + " " + progress.currency;
 
             let fundraiserUpdateTime = document.getElementById("fundraiser-update-time");
-            fundraiserUpdateTime.innerHTML = "fundraising progress updated daily at " + progress.update_time + " " + progress.update_timezone;
+            fundraiserUpdateTime.innerHTML = "fundraising progress updated Sundays at " + progress.update_time + " " + progress.update_timezone;
         }
 
         async function fetchGoalsData() {
